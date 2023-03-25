@@ -1,0 +1,47 @@
+.outer-shadow {
+  --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+  box-shadow: var(--outer-shadow);
+}
+
+.inner-shadow {
+  --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+  box-shadow: var(--inner-shadow);
+}
+
+.songs {
+  padding: 15px;
+  width: 49%;
+  float: left;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.emotion-detector {
+  width: 50%;
+  float: left;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.song-recomander {
+  width: 50%;
+  float: left;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+img {
+  height: 500px;
+  margin: 10px;
+  text-align: center;
+  width: 400px;
+  border-radius: 50%;
+}
+
+body {
+  background-color: rgb(247, 247, 249);
+}
