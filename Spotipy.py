@@ -19,6 +19,7 @@ def getTrackIDs(user, playlist_id):
 def getTrackFeatures(id):
     track_info = sp.track(id)
 
+    url = "https://open.spotify.com/track/"+track_info['id']
     name = track_info['name']
     album = track_info['album']['name']
     artist = track_info['album']['artists'][0]['name']
@@ -26,7 +27,7 @@ def getTrackFeatures(id):
     # length = track_info['duration_ms']
     # popularity = track_info['popularity']
 
-    track_data = [name, album, artist] #, release_date, length, popularity
+    track_data = [name, album, artist, url] #, release_date, length, popularity
     return track_data
 
 # Code for creating dataframe of feteched playlist
@@ -47,7 +48,7 @@ Uncomment for fetching updated playlists
 #     time.sleep(.3)
 #     track_data = getTrackFeatures(track_ids[i])
 #     track_list.append(track_data)
-#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist']) # ,'Release_date','Length','Popularity'
+#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist','URL']) # ,'Release_date','Length','Popularity'
 #     df.to_csv('songs/angry.csv')
 # print("CSV Generated")
 
@@ -57,7 +58,7 @@ Uncomment for fetching updated playlists
 #     time.sleep(.3)
 #     track_data = getTrackFeatures(track_ids[i])
 #     track_list.append(track_data)
-#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist']) # ,'Release_date','Length','Popularity'
+#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist','URL']) # ,'Release_date','Length','Popularity'
 #     df.to_csv('songs/disgusted.csv')
 # print("CSV Generated")
 
@@ -67,7 +68,7 @@ Uncomment for fetching updated playlists
 #     time.sleep(.3)
 #     track_data = getTrackFeatures(track_ids[i])
 #     track_list.append(track_data)
-#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist']) # ,'Release_date','Length','Popularity'
+#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist','URL']) # ,'Release_date','Length','Popularity'
 #     df.to_csv('songs/fearful.csv')
 # print("CSV Generated")
 
@@ -77,7 +78,7 @@ Uncomment for fetching updated playlists
 #     time.sleep(.3)
 #     track_data = getTrackFeatures(track_ids[i])
 #     track_list.append(track_data)
-#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist']) # ,'Release_date','Length','Popularity'
+#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist','URL']) # ,'Release_date','Length','Popularity'
 #     df.to_csv('songs/happy.csv')
 # print("CSV Generated")
 
@@ -87,7 +88,7 @@ Uncomment for fetching updated playlists
 #     time.sleep(.3)
 #     track_data = getTrackFeatures(track_ids[i])
 #     track_list.append(track_data)
-#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist']) # ,'Release_date','Length','Popularity'
+#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist','URL']) # ,'Release_date','Length','Popularity'
 #     df.to_csv('songs/neutral.csv')
 # print("CSV Generated")
 
@@ -97,7 +98,7 @@ Uncomment for fetching updated playlists
 #     time.sleep(.3)
 #     track_data = getTrackFeatures(track_ids[i])
 #     track_list.append(track_data)
-#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist']) # ,'Release_date','Length','Popularity'
+#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist','URL']) # ,'Release_date','Length','Popularity'
 #     df.to_csv('songs/sad.csv')
 # print("CSV Generated")
 
@@ -107,6 +108,6 @@ Uncomment for fetching updated playlists
 #     time.sleep(.3)
 #     track_data = getTrackFeatures(track_ids[i])
 #     track_list.append(track_data)
-#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist']) # ,'Release_date','Length','Popularity'
+#     df = pd.DataFrame(track_list, columns = ['Name','Album','Artist','URL']) # ,'Release_date','Length','Popularity'
 #     df.to_csv('songs/surprised.csv')
 # print("CSV Generated")
