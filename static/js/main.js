@@ -26,7 +26,7 @@ function CreateHtmlTable(data) {
     $("<td></td>").text(value.Name).appendTo(row);
     $("<td></td>").text(value.Album).appendTo(row);
     $("<td></td>").text(value.Artist).appendTo(row);
-    var url = `<a href="${value.URL}">${value.Name}</a>`;
-    $("<td></td>").text(url).appendTo(row);
+    var url = `<a target="_blank" href="${value.URL}">${value.Name}</a>`;
+    $("<td></td>").html(url).appendTo(row);
   });
 }
