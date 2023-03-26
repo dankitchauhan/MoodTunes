@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <title>MoodTunes</title>
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
+
     <!-- Custom CSS -->
     <link
       type="text/css"
       href="{{ url_for('static', filename='/css/style.css') }}"
       rel="stylesheet"
     />
+    <link
+    type="text/css"
+    href="{{ url_for('static', filename='/css/bootstrap/dist/css/bootstrap.min.css') }}"
+    rel="stylesheet"
+  />
+
+
   </head>
   <body>
     <div class="container">
@@ -37,7 +41,7 @@
             <!-- <img src="https://via.placeholder.com/150x150" alt="Mood icon" class="img-thumbnail"> -->
           </div>
           <h2 class="text-center">Recommended playlist:</h2>
-          <ul class="list-group" id="ResultArea"></ul>
+          <div class="" id="ResultArea"></div>
         </div>
       </div>
     </div>

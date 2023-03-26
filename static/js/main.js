@@ -4,14 +4,14 @@ setInterval(function () {
     CreateHtmlTable(data);
   });
   return false;
-}, 100);
+}, 500);
 
 function CreateHtmlTable(data) {
   //Clear result div
   $("#ResultArea").html("");
   //Crate table html tag
   var table = $(
-    "<table class = 'table table-striped table-light table-bordered table-hover table-sm table-responsive' id=DynamicTable></table>"
+    "<table class = 'table table-striped table-light table-bordered table-hover table-sm table-responsive' id=DynamicTable><tbody></tbody></table>"
   ).appendTo("#ResultArea");
   //Create table header row
   var rowHeader = $("<tr></tr>").appendTo(table);
