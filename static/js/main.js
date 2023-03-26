@@ -18,6 +18,7 @@ function CreateHtmlTable(data) {
   $("<td></td>").text("Name").appendTo(rowHeader);
   $("<td></td").text("Album").appendTo(rowHeader);
   $("<td></td>").text("Artist").appendTo(rowHeader);
+  $("<td></td>").text("URL").appendTo(rowHeader);
   //Get JSON data by calling action method in controller
   $.each(data, function (i, value) {
     //Create new row for each record
@@ -25,5 +26,7 @@ function CreateHtmlTable(data) {
     $("<td></td>").text(value.Name).appendTo(row);
     $("<td></td>").text(value.Album).appendTo(row);
     $("<td></td>").text(value.Artist).appendTo(row);
+    var url = `<a href="${value.URL}">${value.Name}</a>`;
+    $("<td></td>").text(url).appendTo(row);
   });
 }

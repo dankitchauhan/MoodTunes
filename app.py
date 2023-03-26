@@ -3,7 +3,7 @@ from camera import *
 
 app = Flask(__name__)
 
-headings = ("Name","Album","Artist")
+headings = ("Name","Album","Artist","URL")
 featuredPlaylist = music_rec()
 featuredPlaylist = featuredPlaylist.head(15)
 @app.route('/')

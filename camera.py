@@ -130,6 +130,6 @@ class VideoCamera(object):
 
 def music_rec():
 	df = pd.read_csv(music_dist[show_text[0]])
-	df = df[['Name','Album','Artist']]
+	df = df[['Name','Album','Artist','URL']]
 	df = df.head(15)
 	return df
